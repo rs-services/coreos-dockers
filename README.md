@@ -11,6 +11,7 @@ See the RightScript "CoreOS Monitoring" in the RightScale MultiCloud Library.  A
 
 Or run these commands on your CoreOS host.  Requires RightLink 10
 
+```
 RS_RLL_PORT=`cat /var/run/rightlink/secret | grep PORT | cut -d= -f2`
 RS_INSTANCE_UUID=`/home/rightlink/rsc --rl10 --x1 .monitoring_id cm17 index_instance_session /api/sessions/instance`
 
@@ -29,3 +30,4 @@ cdwilhelm/coreos-collectd
 auth_tag=rs_monitoring:state=auth
 /usr/local/bin/rsc --rl10 cm15 multi_add /api/tags/multi_add resource_hrefs[]=$RS_SELF_HREF tags[]=$auth_tag &&\
   logger -s -t RightScale "Setting monitoring active tag"
+  ```
