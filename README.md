@@ -9,7 +9,7 @@ The sources of collectd are altered due to the hard path /proc. This allows moni
 How to run :
 See the RightScript "CoreOS Monitoring" in the RightScale MultiCloud Library.  Add the script to the Boot sequence of the server template.
 
-Or run these commands on your CoreOS host.  Requires RightLink 10
+Requires RightLink 10
 
 ```
 #!/bin/bash -ex
